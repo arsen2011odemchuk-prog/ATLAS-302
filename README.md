@@ -1,4 +1,4 @@
-# ATLAS-302 
+ # ATLAS-302 
 
 ATLAS-302 is a VR-controlled humanoid robot with two arms and two legs, capable of lifting objects heavier than its own weight over a 302 mm range. The robot streams real-time video to a VR headset for immersive control and interaction.
 
@@ -37,6 +37,16 @@ ATLAS-302 is a VR-controlled humanoid robot with two arms and two legs, capable 
 - Emergency stop button
 - Weight limits for arms
 - Stable support for humanoid structure
+
+## Diagram
+-The diagram illustrates the overall control and feedback architecture of the ATLAS-302 humanoid robot. At the top of the system, the user operates a VR headset and hand controllers, which send real-time control inputs to the robot. These inputs are received by the main processing unit, such as a Raspberry Pi, which acts as the central controller for the entire system.
+
+-The processing unit interprets user inputs, runs safety checks, and generates movement commands for the motors and actuators that drive the robot’s arms and other mechanical components. At the same time, a head-mounted camera captures live video from the robot’s perspective and sends it back through the processing unit to the VR headset, providing immersive visual feedback.
+
+-A dedicated safety and emergency stop module is connected to the processing unit and can immediately interrupt motor commands or video streaming if unsafe conditions are detected. Solid arrows in the diagram represent normal control and data flow, while dashed arrows indicate interrupt or safety paths. Overall, the diagram represents a closed-loop system where user commands, robot actions, visual feedback, and safety monitoring operate continuously in real time.
+
+<img width="796" height="699" alt="image" src="https://github.com/user-attachments/assets/5ee4c245-f2df-4b5d-a226-f0b0a77bf618" />
+
 
 
   # Bill of Materials (BOM)
